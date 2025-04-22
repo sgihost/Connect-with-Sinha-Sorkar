@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connect with Sinha Sorkar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f4f4f4;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 1000px;
+      padding: 20px;
+    }
+
+    .profile-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .container_img {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .border-blob {
+      width: 100px;
+      height: 100px;
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      overflow: hidden;
+      animation: morph 8s ease-in-out infinite;
+      transition: border-radius 1s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .border-blob img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      animation: imgFloat 6s ease-in-out infinite;
+    }
+
+    @keyframes morph {
+      0% {
+        border-radius: 60% 40% 35% 70% / 60% 30% 70% 40%;
+      }
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+      100% {
+        border-radius: 60% 40% 35% 70% / 60% 30% 70% 40%;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @keyframes imgFloat {
+      0%, 100% {
+        transform: scale(1.05) translateY(0px);
+      }
+      50% {
+        transform: scale(1.05) translateY(3px);
+      }
+    }
+
+    .username {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    .social-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social-nav li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-nav a {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 18px 22px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    i {
+      position: absolute;
+      left: 10%;
+    }
+
+    .social-nav a i {
+      font-size: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-nav a:hover {
+      background-color: #333;
+      color: #fff;
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-nav a:hover i {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    @media (min-width: 481px) {
+      .social-nav {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .social-nav {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media (width: 540px) {
+      .social-nav {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media (max-width: 300px) {
+      .social-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social-nav a {
+        width: 80vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <div class="container_img">
+        <div class="border-blob">
+          <img src="profile.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+      <h2 class="username">Sinha Sorkar</h2>
+    </div>
+
+    <nav>
+      <ul class="social-nav">
+        <li>
+          <a href="mailto:sinha.xc@gmail.com" class="email">
+            <i class="fas fa-envelope"></i><span>Email</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>
