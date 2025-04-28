@@ -1,233 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Connect with Sinha Sorkar</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Sinha Sorkar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: "Arial", sans-serif;
-      background-color: #f4f4f4;
-      color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4; /* Dark background */
+    color: black; /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
 
-    .container {
-      text-align: center;
-      width: 100%;
-      max-width: 1000px;
-      padding: 20px;
-    }
+/* Main Container */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
 
-    .profile-card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 25px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
-      margin-bottom: 40px;
-    }
+/* Profile Card */
+.profile-card {
+    background: #fff; /* Slightly lighter dark */
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-bottom: 40px;
+    
+    display: grid;
+    grid-template-columns: 1;
+    justify-content: center;
+}
 
-    .profile-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
+/* Username */
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
 
-    .container_img {
-      width: 120px;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 10px;
-      animation: float 5s ease-in-out infinite;
-    }
+/* Hover Effect */
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
 
-    .border-blob {
-      width: 100px;
-      height: 100px;
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      overflow: hidden;
-      animation: morph 8s ease-in-out infinite;
-      transition: border-radius 1s ease-in-out;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
+/* Social Media Navigation */
+nav {
+    width: 100%;
+}
 
-    .border-blob img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.05);
-      animation: imgFloat 6s ease-in-out infinite;
-    }
+/* Social Media Icons List */
+.social-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    @keyframes morph {
-      0% {
-        border-radius: 60% 40% 35% 70% / 60% 30% 70% 40%;
-      }
-      50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-      }
-      100% {
-        border-radius: 60% 40% 35% 70% / 60% 30% 70% 40%;
-      }
-    }
+/* Icon with Name Style */
+.social-nav li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-6px);
-      }
-    }
+/* Social Media Links */
+.social-nav a {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 22px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+}
 
-    @keyframes imgFloat {
-      0%, 100% {
-        transform: scale(1.05) translateY(0px);
-      }
-      50% {
-        transform: scale(1.05) translateY(3px);
-      }
-    }
+i {
+    position: absolute;
+    left: 10%;
+}
 
-    .username {
-      font-size: 22px;
-      font-weight: bold;
-      color: #333;
-      margin: 0;
-    }
+/* Adjust icon aspect ratio (32:5) */
+.social-nav a i {
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    aspect-ratio: 32 / 5;
+    object-fit: contain;
+}
 
-    nav {
-      width: 100%;
-    }
+/* Icon and Name Hover Effect */
+.social-nav a:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
 
+.social-nav a:hover i {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (min-width: 481px) {
     .social-nav {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .social-nav li {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .social-nav a {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 18px 22px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
-      font-weight: 600;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-      width: 250px;
-      height: 50px;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    i {
-      position: absolute;
-      left: 10%;
-    }
-
-    .social-nav a i {
-      font-size: 20px;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    .social-nav a:hover {
-      background-color: #333;
-      color: #fff;
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .social-nav a:hover i {
-      color: #fff;
-      transform: scale(1.2);
-    }
-
-    @media (min-width: 481px) {
-      .social-nav {
         grid-template-columns: repeat(2, 1fr);
-      }
     }
+}
 
-    @media (max-width: 480px) {
-      .social-nav {
+@media (max-width: 480px) {
+    .social-nav {
         grid-template-columns: repeat(1, 1fr);
-      }
     }
+}
 
-    @media (width: 540px) {
-      .social-nav {
+@media (width: 540px) {
+    .social-nav {
         grid-template-columns: repeat(1, 1fr);
-      }
     }
+}
 
-    @media (max-width: 300px) {
-      .social-nav {
+@media (max-width: 300px) {
+    .social-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
-
-      .social-nav a {
-        width: 80vw;
-      }
     }
-  </style>
+    
+    .social-nav a {
+        width: 80vw;
+    }
+}
+
+
+
+
+
+
+
+
+/* for profile pic*/
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    border: 4px dashed black;
+    
+    animation: r1 3000s linear infinite;
+}
+
+.box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 119px;
+    height: 119px;
+    border-radius: 50%;
+    border: 3px dashed black;
+    
+    animation: r2 3000s linear infinite;
+}
+
+.profile-frame img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(80%) contrast(1.4) brightness(1);
+    
+    animation: r3 3000s linear infinite;
+}
+
+.profile-frame {
+    width: 110px;
+    height: 110px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid black;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-frame:hover {
+    transform: scale(1.05);
+}
+
+.line1 {
+    width: 68px;
+    height: 1000px;
+    border: 1px solid black;
+
+    position: absolute;
+    left: 65px;
+    bottom: 0;
+    
+    animation: blink 7s ease 1s infinite;
+}
+
+.line2 {
+    width: 98px;
+    height: 1000px;
+    border: 1px solid black;
+
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    
+    animation: blink 3s ease 2s infinite;
+}
+
+
+
+
+@keyframes blink {
+    from {
+        z-index: 9;
+        transform: rotate(-9000000deg);
+    }
+    to {
+        z-index: ;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes r1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(100000deg);
+    }
+}
+
+@keyframes r2 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-200000deg);
+    }
+}
+
+@keyframes r3 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(100000deg);
+    }
+}
+
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="profile-card">
-      <div class="container_img">
-        <div class="border-blob">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-      </div>
-      <h2 class="username">Sinha Sorkar</h2>
+    <div class="container">
+        <div class="profile-card">
+            <div class="box1">
+        <div class="box2">
+            <div class="profile-frame">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <img src="profile.jpg" alt="Profile Pic">
+            </div>
+        </div>        
     </div>
-
-    <nav>
-      <ul class="social-nav">
-        <li>
+            <h2 class="username">Sinha Sorkar</h2>
+        </div>
+        
+        <nav>
+            <ul class="social-nav">
+                <li>
           <a href="mailto:sinha.xc@gmail.com" class="email">
             <i class="fas fa-envelope"></i><span>Email</span>
           </a>
         </li>
-      </ul>
-    </nav>
-  </div>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
